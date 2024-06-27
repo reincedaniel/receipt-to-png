@@ -1,34 +1,34 @@
-# Projeto: Receipt Capture and Download in Html / Vuejs 3 (CDN)
+# Projeto: Captura e Download de Recibo em Html / Vuejs 3 (CDN)
 
-This Vue.js project allows you to create, visualize, and capture a fictional receipt as a PNG image, which can be downloaded by the user.
+Este projeto em Vue.js permite criar, visualizar e capturar um recibo fictício como uma imagem PNG, que pode ser baixada pelo usuário.
 
 ![receipt](https://github.com/reincedaniel/receipt-to-png/assets/33723412/a92e0925-c533-487c-b3f7-403a8c8c0dd2)
 
 
-## Features
+## Funcionalidades
 
-- **Receipt Visualization**: Displays a fictional receipt with information such as customer name and received amount in euros.
-- **Image Capture**: Uses the HTML2Canvas library to capture the receipt visualization as a PNG image.
-- **Receipt Download**: Allows the user to download the captured receipt image.
+- **Visualização do Recibo**: Exibe um recibo fictício com informações como nome do cliente e valor recebido em euros.
+- **Captura de Imagem**: Utiliza a biblioteca HTML2Canvas para capturar a visualização do recibo como uma imagem PNG.
+- **Download do Recibo**: Permite ao usuário baixar a imagem capturada do recibo.
 
-## How to Use
+## Como Usar
 
-1. **View the Receipt**: Upon opening the page, a fictional receipt is displayed.
-2. **Capture the Receipt**: Click the "Capture Receipt" button to generate the receipt image.
-3. **Download the Receipt**: After capturing, a "Download Receipt" button will appear to download the image.
+1. **Visualizar o Recibo**: Ao abrir a página, um recibo fictício é apresentado.
+2. **Capturar o Recibo**: Clique no botão "Capturar Recibo" para gerar a imagem do recibo.
+3. **Baixar o Recibo**: Após a captura, um botão "Baixar Recibo" será exibido para realizar o download da imagem.
 
-## Possible Enhancements
+## Melhorias Possíveis
 
-- Adjust image quality for higher resolutions.
-- Expand CSS styles to enhance interface appeal and responsiveness.
-- Implement dynamic data input to create customized receipts.
+- Ajustar a qualidade da imagem capturada para obter resoluções mais altas.
+- Expandir os estilos CSS para tornar a interface mais atraente e responsiva.
+- Implementar a entrada dinâmica de dados para criar recibos personalizados.
 
-## Interesting Projects
+## Projetos Interessantes
 
-- **Document Generation Applications**: Ideal for projects involving dynamic creation and visualization of documents such as invoices or reports.
-- **Interactive Portfolios**: Great for adding interactive sections to online portfolios, allowing visitors to view and download work examples.
+- **Aplicações de Geração de Documentos**: Ideal para projetos que envolvem a criação dinâmica e visualização de documentos, como faturas ou relatórios.
+- **Portfólios Interativos**: Ótimo para adicionar seções interativas em portfólios online, permitindo aos visitantes visualizar e baixar exemplos de trabalhos.
 
-## Author
+## Autor
 
 **Lourenço Carlos**
 - LinkedIn: [Lourenço Carlos](https://www.linkedin.com/in/louren%C3%A7o-carlos-25a162146/)
