@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recibo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #app {
+      max-width: 600px;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #recibo {
+      border-top: 4px solid #007bff;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    #recibo h1 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    #recibo p {
+      margin-bottom: 10px;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .imagem-capturada {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .imagem-capturada img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .download-btn {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 480px) {
+      #recibo {
+        font-size: 16px;
+      }
+      #recibo h1 {
+        font-size: 20px;
+      }
+      #recibo p {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="recibo">
+      <h1>Recibo</h1>
+      <p>Recebemos de: {{ nome }}</p>
+      <p>Valor: {{ valor.toFixed(2) }} Euros</p>
+    </div>
+    <button @click="capturarRecibo">Capturar Recibo</button>
+    <br><br>
+    <h3>Resultado:</h3>
+    <div v-if="imagem" class="imagem-capturada">
+      <img :src="imagem" alt="Recibo Capturado"/>
+      <br><br>
+      <a :href="imagem" download="recibo.png" class="download-btn">Baixar Recibo</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          nome: 'Lourenço Carlos',
+          valor: 100.00,
+          imagem: null,
+        };
+      },
+      methods: {
+        capturarRecibo() {
+          const reciboElement = document.getElementById('recibo');
+          html2canvas(reciboElement, {
+            scale: 2,
+            backgroundColor: null,
+            logging: true
+          }).then(canvas => {
+            this.imagem = canvas.toDataURL('image/png', 1.0);
+          });
+        },
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
