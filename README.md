@@ -1,4 +1,4 @@
-# Projeto: Captura e Download de Recibo Html / Vuejs 3 (CDN)
+# Projeto: Receipt Capture and Download in Html / Vuejs 3 (CDN)
 
 This Vue.js project allows you to create, visualize, and capture a fictional receipt as a PNG image, which can be downloaded by the user.
 
