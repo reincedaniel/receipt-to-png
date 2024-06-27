@@ -2,6 +2,9 @@
 
 This Vue.js project allows you to create, visualize, and capture a fictional receipt as a PNG image, which can be downloaded by the user.
 
+![receipt](https://github.com/reincedaniel/receipt-to-png/assets/33723412/a92e0925-c533-487c-b3f7-403a8c8c0dd2)
+
+
 ## Features
 
 - **Receipt Visualization**: Displays a fictional receipt with information such as customer name and received amount in euros.
